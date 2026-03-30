@@ -71,7 +71,7 @@ def ask(question: str):
     }
 
     payload = {
-        "model": "meta-llama/llama-3-8b-instruct",
+        "model": os.environ.get("MODEL_NAME"),
         "messages": [
             {"role": "user", "content": question}
         ]
